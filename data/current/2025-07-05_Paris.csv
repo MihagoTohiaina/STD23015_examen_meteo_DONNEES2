@@ -1,0 +1,2 @@
+ville,pays,date_extraction,timestamp_donnees,temperature,temp_min,temp_max,humidite,pression,vent_vitesse,vent_direction,precipitation,couverture_nuageuse,conditions,timezone
+Paris,FR,2025-07-05 10:51:55,1751701629,18.96,17.88,20.28,57,1021,4.12,300,0,0,ciel dégagé,7200

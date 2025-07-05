@@ -1,0 +1,2 @@
+ville,pays,date_extraction,timestamp_donnees,temperature,temp_min,temp_max,humidite,pression,vent_vitesse,vent_direction,precipitation,couverture_nuageuse,conditions,timezone
+Antananarivo,MG,2025-07-05 10:51:59,1751701918,15.98,15.98,15.98,63,1023,3.6,160,0,75,nuageux,10800
