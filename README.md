@@ -154,7 +154,7 @@ Ce projet met en place un pipeline réutilisable et automatisé pour analyser le
 1. **Cloner ce dépôt** :
 
 ```bash
-git clone https://github.com/votre-utilisateur/comparaison-climat.git
+git clone git@github.com:MihagoTohiaina/STD23015_examen_meteo_DONNEES2.git
 ```
 
 2. **Configurer Airflow & les variables (**\`\`**)**
