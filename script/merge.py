@@ -4,52 +4,40 @@ import os
 import logging
 from datetime import datetime
 
+# merge.py - Version corrigée
 def merge_current_data() -> str:
-    """
-    Fusionne tous les fichiers CSV de données actuelles en un seul fichier global
-    
-    Returns:
-        str: Chemin du fichier global créé/mis à jour
-    """
     input_dir = "data/current"
     output_file = "data/processed/current_global.csv"
     
     try:
-        # Création du dossier processed si inexistant
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         
-        # Initialisation du DataFrame global
-        global_df = pd.DataFrame()
-        if os.path.exists(output_file):
-            global_df = pd.read_csv(output_file)
+        # Liste tous les fichiers actuels
+        all_files = [f for f in os.listdir(input_dir) if f.endswith('_current.csv')]
         
-        # Collecte des nouveaux fichiers
-        new_data = []
-        for file in os.listdir(input_dir):
-            if file.endswith('_current.csv'):
-                city = file.replace('_current.csv', '').replace('_', ' ')
-                df = pd.read_csv(f"{input_dir}/{file}")
-                df['date_merge'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                new_data.append(df)
-        
-        if not new_data:
-            logging.warning("Aucune nouvelle donnée actuelle à fusionner")
+        if not all_files:
+            logging.error("Aucun fichier de données actuelles trouvé dans data/current/")
+            # Crée un fichier vide avec les colonnes attendues
+            columns = [
+                'ville', 'date_extraction', 'date_donnees', 'temperature', 
+                'temp_min', 'temp_max', 'humidite', 'pression', 'description',
+                'vent_vitesse', 'pluie_1h', 'couverture_nuageuse'
+            ]
+            pd.DataFrame(columns=columns).to_csv(output_file, index=False)
             return output_file
         
-        # Fusion et déduplication
-        updated_df = pd.concat([global_df] + new_data, ignore_index=True)
-        updated_df = updated_df.drop_duplicates(
-            subset=['ville', 'date_donnees'],  # Clé unique ville + date des données
-            keep='last'                         # Garde la dernière version
-        ).sort_values(by=['ville', 'date_donnees'])
+        # Charge et concatène tous les fichiers
+        dfs = []
+        for file in all_files:
+            dfs.append(pd.read_csv(f"{input_dir}/{file}"))
         
-        # Sauvegarde
-        updated_df.to_csv(output_file, index=False)
-        logging.info(f"Fusion actuelle réussie : {len(new_data)} villes mises à jour")
+        merged_df = pd.concat(dfs, ignore_index=True)
+        merged_df.to_csv(output_file, index=False)
+        logging.info(f"Fichier current_global.csv créé avec {len(merged_df)} enregistrements")
         return output_file
         
     except Exception as e:
-        logging.error(f"Erreur lors de la fusion des données actuelles : {str(e)}")
+        logging.error(f"Erreur critique lors de la fusion : {str(e)}")
         raise
 
 def merge_historical_data() -> str:

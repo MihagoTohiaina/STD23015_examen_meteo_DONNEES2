@@ -1,0 +1,6 @@
+climat_id,type,plage_temp,description
+1,Tropical,25-35°C,Chaud et humide
+2,Sec,20-40°C,Chaud et sec
+3,Tempéré,10-25°C,Doux
+4,Continental,-10-30°C,Variations saisonnières
+5,Polaire,-40-10°C,Froid
