@@ -25,9 +25,9 @@ def extract_historical_weather(latitude: float, longitude: float, city: str) -> 
         bool: True si l'extraction réussit, False sinon
     """
     try:
-        # Calcul des dates (8 dernières années)
+        # Calcul des dates (3 dernières années)
         end_date = datetime.now()
-        start_date = end_date - timedelta(days=8*365) # 8 ans pour avoir des données suffisantes
+        start_date = end_date - timedelta(days=3*365) # 3 ans pour avoir des données suffisantes
         
         # Configuration de la requête API
         url = "https://archive-api.open-meteo.com/v1/archive"
@@ -104,7 +104,7 @@ def main():
             logging.error(f"Coordonnées non trouvées pour {city}")
         
         # NOUVEAU : Ajouter un délai pour éviter les erreurs "Too Many Requests"
-        time.sleep(5) # Attendre 2 secondes entre chaque requête API
+        time.sleep(2) # Attendre 2 secondes entre chaque requête API
         logging.info(f"Pause de 2 secondes avant d'extraire les données de la prochaine ville.")
 
 if __name__ == "__main__":

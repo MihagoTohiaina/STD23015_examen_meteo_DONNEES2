@@ -20,3 +20,59 @@
 2025-07-18 10:35:48,517 - ERROR - Erreur réseau/API pour Antananarivo: 429 Client Error: Too Many Requests for url: https://archive-api.open-meteo.com/v1/archive?latitude=-18.8792&longitude=47.5079&start_date=2017-07-20&end_date=2025-07-18&daily=temperature_2m_max&daily=temperature_2m_min&daily=precipitation_sum&daily=rain_sum&daily=snowfall_sum&timezone=auto
 2025-07-18 10:35:48,520 - ERROR - Échec de l'extraction des données historiques pour Antananarivo
 2025-07-18 10:35:50,521 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:46:58,956 - INFO - Données historiques pour Paris extraites avec succès
+2025-07-18 10:47:03,958 - INFO - Pause de 5 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:47:05,235 - INFO - Données historiques pour New York extraites avec succès
+2025-07-18 10:47:10,237 - INFO - Pause de 5 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:47:11,492 - INFO - Données historiques pour Tokyo extraites avec succès
+2025-07-18 10:47:16,493 - INFO - Pause de 5 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:47:18,345 - INFO - Données historiques pour Sydney extraites avec succès
+2025-07-18 10:47:23,347 - INFO - Pause de 5 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:47:25,276 - INFO - Données historiques pour São Paulo extraites avec succès
+2025-07-18 10:47:30,277 - INFO - Pause de 5 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:47:31,734 - INFO - Données historiques pour Moscow extraites avec succès
+2025-07-18 10:47:36,736 - INFO - Pause de 5 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:47:38,461 - INFO - Données historiques pour Antananarivo extraites avec succès
+2025-07-18 10:47:43,462 - INFO - Pause de 5 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:54:57,532 - INFO - Données historiques pour Paris extraites avec succès
+2025-07-18 10:54:59,534 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:55:00,404 - INFO - Données historiques pour New York extraites avec succès
+2025-07-18 10:55:02,405 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:55:03,259 - INFO - Données historiques pour Tokyo extraites avec succès
+2025-07-18 10:55:05,260 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:55:06,127 - INFO - Données historiques pour Sydney extraites avec succès
+2025-07-18 10:55:08,129 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:55:08,974 - INFO - Données historiques pour São Paulo extraites avec succès
+2025-07-18 10:55:10,975 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:55:11,860 - INFO - Données historiques pour Moscow extraites avec succès
+2025-07-18 10:55:13,862 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:55:14,726 - INFO - Données historiques pour Antananarivo extraites avec succès
+2025-07-18 10:55:16,727 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:56:23,596 - INFO - Données historiques pour Paris extraites avec succès
+2025-07-18 10:56:25,597 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:56:26,407 - INFO - Données historiques pour New York extraites avec succès
+2025-07-18 10:56:28,409 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:56:29,207 - INFO - Données historiques pour Tokyo extraites avec succès
+2025-07-18 10:56:31,208 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:56:32,022 - INFO - Données historiques pour Sydney extraites avec succès
+2025-07-18 10:56:34,024 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:56:34,848 - INFO - Données historiques pour São Paulo extraites avec succès
+2025-07-18 10:56:36,849 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:56:37,642 - INFO - Données historiques pour Moscow extraites avec succès
+2025-07-18 10:56:39,643 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:56:40,471 - INFO - Données historiques pour Antananarivo extraites avec succès
+2025-07-18 10:56:42,476 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:57:26,914 - INFO - Données historiques pour Paris extraites avec succès
+2025-07-18 10:57:28,916 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:57:29,727 - INFO - Données historiques pour New York extraites avec succès
+2025-07-18 10:57:31,729 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:57:32,564 - INFO - Données historiques pour Tokyo extraites avec succès
+2025-07-18 10:57:34,566 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:57:35,417 - INFO - Données historiques pour Sydney extraites avec succès
+2025-07-18 10:57:37,419 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:57:38,252 - INFO - Données historiques pour São Paulo extraites avec succès
+2025-07-18 10:57:40,254 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:57:41,110 - INFO - Données historiques pour Moscow extraites avec succès
+2025-07-18 10:57:43,112 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:57:43,946 - INFO - Données historiques pour Antananarivo extraites avec succès
+2025-07-18 10:57:45,954 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
