@@ -1,0 +1,2 @@
+ville,pays,date_extraction,timestamp_donnees,temperature,temp_min,temp_max,humidite,pression,vent_vitesse,vent_direction,precipitation,couverture_nuageuse,conditions,timezone
+Tokyo,JP,2025-07-18 10:32:34,1752823895,30.03,28.75,30.91,60,1015,9.26,190,0,75,nuageux,32400

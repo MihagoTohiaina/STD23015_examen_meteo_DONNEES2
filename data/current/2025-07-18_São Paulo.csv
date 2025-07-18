@@ -1,0 +1,2 @@
+ville,pays,date_extraction,timestamp_donnees,temperature,temp_min,temp_max,humidite,pression,vent_vitesse,vent_direction,precipitation,couverture_nuageuse,conditions,timezone
+São Paulo,BR,2025-07-18 10:32:35,1752823778,14.18,13.38,15.2,74,1019,2.57,330,0,0,ciel dégagé,-10800

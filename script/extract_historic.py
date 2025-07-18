@@ -1,9 +1,16 @@
-# historical_weather.py
 import os
 import requests
 import pandas as pd
 from datetime import datetime, timedelta
 import logging
+import time # Ajout pour la pause
+
+# Configuration du logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
+                    handlers=[
+                        logging.FileHandler("data/historical_extraction.log"), # Assurez-vous que ce fichier est dans data
+                        logging.StreamHandler()
+                    ])
 
 def extract_historical_weather(latitude: float, longitude: float, city: str) -> bool:
     """
@@ -20,7 +27,7 @@ def extract_historical_weather(latitude: float, longitude: float, city: str) -> 
     try:
         # Calcul des dates (8 dernières années)
         end_date = datetime.now()
-        start_date = end_date - timedelta(days=8*365)
+        start_date = end_date - timedelta(days=8*365) # 8 ans pour avoir des données suffisantes
         
         # Configuration de la requête API
         url = "https://archive-api.open-meteo.com/v1/archive"
@@ -30,7 +37,7 @@ def extract_historical_weather(latitude: float, longitude: float, city: str) -> 
             'start_date': start_date.strftime("%Y-%m-%d"),
             'end_date': end_date.strftime("%Y-%m-%d"),
             'daily': ['temperature_2m_max', 'temperature_2m_min', 
-                     'precipitation_sum', 'rain_sum', 'snowfall_sum'],
+                      'precipitation_sum', 'rain_sum', 'snowfall_sum'],
             'timezone': 'auto'
         }
         
@@ -70,22 +77,20 @@ def extract_historical_weather(latitude: float, longitude: float, city: str) -> 
 
 def get_city_coordinates(city: str) -> tuple:
     """Retourne les coordonnées (latitude, longitude) pour une ville donnée"""
-    # Mapping simplifié des coordonnées des villes
     CITY_COORDINATES = {
         "Paris": (48.8566, 2.3522),
         "New York": (40.7128, -74.0060),
         "Tokyo": (35.6762, 139.6503),
         "Sydney": (-33.8688, 151.2093),
         "Moscow": (55.7558, 37.6173),
-        "Antananarivo": (-18.8792, 47.5079)
+        "Antananarivo": (-18.8792, 47.5079),
+        "São Paulo": (-23.5505, -46.6333) # Ajout de São Paulo
     }
     return CITY_COORDINATES.get(city, (None, None))
 
 def main():
     """Fonction principale pour l'extraction des données historiques"""
-    CITIES = ["Paris", "New York", "Tokyo", "Sydney", "Moscow", "Antananarivo"]
-    
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    CITIES = ["Paris", "New York", "Tokyo", "Sydney", "São Paulo", "Moscow", "Antananarivo"] # Assurez-vous que toutes les villes sont ici
     
     for city in CITIES:
         lat, lon = get_city_coordinates(city)
@@ -93,8 +98,14 @@ def main():
             success = extract_historical_weather(lat, lon, city)
             if success:
                 logging.info(f"Données historiques pour {city} extraites avec succès")
+            else:
+                logging.error(f"Échec de l'extraction des données historiques pour {city}")
         else:
             logging.error(f"Coordonnées non trouvées pour {city}")
+        
+        # NOUVEAU : Ajouter un délai pour éviter les erreurs "Too Many Requests"
+        time.sleep(5) # Attendre 2 secondes entre chaque requête API
+        logging.info(f"Pause de 2 secondes avant d'extraire les données de la prochaine ville.")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,2 @@
+ville,pays,date_extraction,timestamp_donnees,temperature,temp_min,temp_max,humidite,pression,vent_vitesse,vent_direction,precipitation,couverture_nuageuse,conditions,timezone
+Moscow,RU,2025-07-18 10:32:35,1752823901,23.51,22.24,24.29,64,1014,4.69,71,0,10,ciel dégagé,10800

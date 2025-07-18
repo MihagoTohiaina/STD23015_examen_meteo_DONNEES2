@@ -163,6 +163,6 @@ git clone https://github.com/votre-utilisateur/comparaison-climat.git
 
 ---
 
-##  Licence
+##  Licence 
 
 MIT © 2025

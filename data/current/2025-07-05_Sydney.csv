@@ -1,2 +1,0 @@
-ville,pays,date_extraction,timestamp_donnees,temperature,temp_min,temp_max,humidite,pression,vent_vitesse,vent_direction,precipitation,couverture_nuageuse,conditions,timezone
-Sydney,AU,2025-07-05 10:51:57,1751701796,15.35,14.05,15.95,76,1022,0.45,64,0,100,couvert,36000

@@ -1,0 +1,2 @@
+ville,pays,date_extraction,timestamp_donnees,temperature,temp_min,temp_max,humidite,pression,vent_vitesse,vent_direction,precipitation,couverture_nuageuse,conditions,timezone
+New York,US,2025-07-18 10:32:33,1752823809,26.13,24.6,26.98,60,1013,6.69,310,0,0,ciel dégagé,-14400

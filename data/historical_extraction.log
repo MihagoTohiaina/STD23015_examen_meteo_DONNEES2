@@ -5,3 +5,18 @@
 2025-07-05 10:54:15,561 - INFO - Données historiques extraites pour São Paulo (2015-01-01 à 2023-12-31)
 2025-07-05 10:54:20,353 - INFO - Données historiques extraites pour Moscow (2015-01-01 à 2023-12-31)
 2025-07-05 10:54:23,870 - ERROR - Erreur réseau/API pour Antananarivo: 429 Client Error: Too Many Requests for url: https://archive-api.open-meteo.com/v1/archive?latitude=-18.91368&longitude=47.53613&start_date=2015-01-01&end_date=2023-12-31&daily=temperature_2m_max&daily=temperature_2m_min&daily=temperature_2m_mean&daily=precipitation_sum&daily=rain_sum&daily=snowfall_sum&daily=wind_speed_10m_max&timezone=auto
+2025-07-18 10:35:28,490 - INFO - Données historiques pour Paris extraites avec succès
+2025-07-18 10:35:30,492 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:35:31,686 - INFO - Données historiques pour New York extraites avec succès
+2025-07-18 10:35:33,688 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:35:34,918 - INFO - Données historiques pour Tokyo extraites avec succès
+2025-07-18 10:35:36,920 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:35:38,418 - INFO - Données historiques pour Sydney extraites avec succès
+2025-07-18 10:35:40,420 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:35:42,012 - INFO - Données historiques pour São Paulo extraites avec succès
+2025-07-18 10:35:44,013 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:35:45,744 - INFO - Données historiques pour Moscow extraites avec succès
+2025-07-18 10:35:47,746 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.
+2025-07-18 10:35:48,517 - ERROR - Erreur réseau/API pour Antananarivo: 429 Client Error: Too Many Requests for url: https://archive-api.open-meteo.com/v1/archive?latitude=-18.8792&longitude=47.5079&start_date=2017-07-20&end_date=2025-07-18&daily=temperature_2m_max&daily=temperature_2m_min&daily=precipitation_sum&daily=rain_sum&daily=snowfall_sum&timezone=auto
+2025-07-18 10:35:48,520 - ERROR - Échec de l'extraction des données historiques pour Antananarivo
+2025-07-18 10:35:50,521 - INFO - Pause de 2 secondes avant d'extraire les données de la prochaine ville.

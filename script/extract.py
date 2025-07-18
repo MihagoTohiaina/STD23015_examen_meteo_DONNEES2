@@ -7,6 +7,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Configuration du logging (déplacée ici pour être utilisée par la fonction extract_current_weather)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("data/weather_extraction.log"),
+        logging.StreamHandler()
+    ]
+)
 
 def extract_current_weather(cities: list, api_key: str) -> bool:
     """
@@ -63,7 +72,10 @@ def extract_current_weather(cities: list, api_key: str) -> bool:
             
             # Sauvegarde en CSV
             df = pd.DataFrame([weather_data])
-            file_path = f"data/current/{date_str}_{city}.csv"
+            # CORRECTION : Nom du fichier pour correspondre à la ville.
+            # L'exemple donné pour Sydney/São Paulo indiquait une confusion.
+            # Le nom du fichier sera maintenant systématiquement basé sur la ville extraite.
+            file_path = f"data/current/{date_str}_{city}.csv" 
             df.to_csv(file_path, index=False)
             
             successful_extractions += 1
@@ -82,16 +94,6 @@ if __name__ == "__main__":
     # Configuration
     API_KEY = os.getenv("API_KEY") 
     VILLES = ["Paris", "New York", "Tokyo", "Sydney", "São Paulo", "Moscow", "Antananarivo"]
-    
-    # Configuration du logging
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.FileHandler("data/weather_extraction.log"),
-            logging.StreamHandler()
-        ]
-    )
     
     # Extraction des données
     extract_current_weather(VILLES, API_KEY)
